@@ -5,4 +5,9 @@ export const FooterWrapper = styled.footer`
     color: white;
     padding: 1rem;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 `;
