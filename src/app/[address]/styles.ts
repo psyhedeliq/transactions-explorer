@@ -48,7 +48,7 @@ export const SortButton = styled.button`
 
 export const TransactionList = styled.ul`
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 60px 0;
     width: 100%;
     max-width: 600px;
 `;
@@ -63,6 +63,11 @@ export const TransactionItem = styled.li`
     justify-content: center;
     align-items: center;
 
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     @media (max-width: 768px) {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -76,11 +81,21 @@ export const TransactionLink = styled.a`
     flex-direction: column;
     align-items: center;
     width: 100%;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 `;
 
 export const TransactionAmount = styled.span`
     font-weight: bold;
     margin-bottom: 0.5rem;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
 `;
 
 export const TransactionTime = styled.span`
