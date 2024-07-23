@@ -105,10 +105,6 @@ export const getTransactionDetails = async (
     const apiKey =
         network === 'ethereum' ? ETHERSCAN_API_KEY : POLYGONSCAN_API_KEY;
 
-    console.log('Fetching transaction details for:', txHash);
-    console.log('API URL:', apiUrl);
-    console.log('Network:', network);
-
     try {
         let txData;
         let receiptData;
@@ -159,8 +155,6 @@ export const getTransactionDetails = async (
             }
         }
 
-        console.log('API Response:', txData);
-
         if (!txData) {
             throw new Error('Transaction not found');
         }
@@ -173,8 +167,6 @@ export const getTransactionDetails = async (
                 apiKey!
             );
         }
-
-        console.log('Block Timestamp:', blockTimestamp);
 
         return {
             hash: txData.hash,

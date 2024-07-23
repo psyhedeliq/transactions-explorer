@@ -98,8 +98,6 @@ export default function AddressDetailsPage({
     if (!addressDetails)
         return <ErrorMessage message="Address details not found" />;
 
-    console.log({ address: transactions });
-
     return (
         <AddressWrapper>
             <Title>
